@@ -1,3 +1,20 @@
+This database will solve the following:
+
+Efficient Resource Management: It allows for better tracking and management of academic resources, ensuring that students can easily access the materials they need.
+
+Order Tracking: Facilitates the monitoring of orders placed by students, providing insights into which resources are in demand and helping with inventory management.
+
+Personalization: By analyzing student orders, the database can help tailor recommendations for resources, improving the academic experience.
+
+Performance Analysis: Educators can assess which resources are most frequently used, helping to improve curriculum and resource allocation.
+
+Cost Management: Helps in budgeting and financial planning by tracking expenditures related to academic resources.
+
+Communication: Enhances communication between students, faculty, and resource providers regarding availability and order status.
+
+Data Insights: Provides valuable data for research on student engagement and resource effectiveness.
+
+
 -- ----------------------Create Ctables-----------------------------------------------
 CREATE TABLE Customers (
     customer_id NUMBER PRIMARY KEY,
@@ -73,6 +90,9 @@ INSERT INTO Orders (order_id, order_date, customer_id) VALUES (102, SYSDATE, 1);
 
 -- UPDATE
 UPDATE Orders SET order_date = SYSDATE WHERE order_id = 102;
+UPDATE Customers SET first_name = 'Kanjogera' WHERE customer_id = 1;
+UPDATE Customers SET first_name = 'Niyoyita' WHERE customer_id = 2;
+
 
 -- DELETE
 DELETE FROM Orders WHERE order_id = 102;
